@@ -1,0 +1,28 @@
+
+<primeiraTela>:
+   
+    canvas: 
+        Color:
+            rgba: 1,1,1,1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Label: 
+        text:'Sou a primeira Tela'
+        color: 1,0,0,1
+           
+    Button:
+        text: 'Ir para a segunda tela'
+        size_hint: 0.5, 0.1
+        pos_hint: {"center_x": 0.5, "center_y": 0.3}
+        on_press: root.manager.current = "segundaTela"
+<segundaTela>:
+    Label:
+        text: 'sou a segunda tela'
+        color: 1,0,0,1
+    Button:
+        text: 'voltar'
+        size_hint: 0.5, 0.1
+        pos_hint: {"center_x": 0.5, "center_y": 0.3}
+        on_press: root.manager.current = "primeiraTela"
+    
